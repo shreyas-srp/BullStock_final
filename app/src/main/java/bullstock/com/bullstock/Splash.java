@@ -14,7 +14,7 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        //TypefaceProvider.registerDefaultIconSets();
 
         new Handler().postDelayed(new Runnable(){
             @Override
@@ -29,7 +29,7 @@ public class Splash extends AppCompatActivity {
                     finish();
                 }
                 else {
-                    mainIntent = new Intent(getApplicationContext(),MainActivity.class);
+                    mainIntent = new Intent(getApplicationContext(),Login_activity.class);
                     startActivity(mainIntent);
                     finish();
                 }

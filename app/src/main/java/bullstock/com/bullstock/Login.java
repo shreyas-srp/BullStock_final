@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -25,6 +26,11 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+=======
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+>>>>>>> parent of 2404c6e... k
 
 
 /**
@@ -106,6 +112,7 @@ class login_process extends AsyncTask<String,Void,String> {
             HttpClient httpClient = new DefaultHttpClient();
 
 // Creating HTTP Post
+<<<<<<< HEAD
             HttpPost httpPost = new HttpPost("http://10.10.21.110/bullstock/register.php");
             List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
             nameValuePair.add(new BasicNameValuePair("username", "shrey"));
@@ -134,10 +141,14 @@ class login_process extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
 
             }
+=======
+            HttpPost httpPost = new HttpPost("http://10.10.21.110/");
+>>>>>>> parent of 2404c6e... k
         }
         catch (Exception e){
             Log.e("shrey",e+"");
         }
+<<<<<<< HEAD
 
 
         return status;
@@ -145,4 +156,11 @@ class login_process extends AsyncTask<String,Void,String> {
 
 }
 
+=======
+>>>>>>> parent of 2404c6e... k
 
+
+        return status;
+    }
+
+}

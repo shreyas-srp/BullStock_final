@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.ParseObject;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,29 +38,36 @@ public class Register extends Fragment {
         password_edit = (EditText) rootview.findViewById(R.id.register_password);
         phone_edit = (EditText) rootview.findViewById(R.id.register_phone);
 
-        String username = username_edit.getText().toString();
-        String password = password_edit.getText().toString();
-        String phone = phone_edit.getText().toString();
+        final String username = username_edit.getText().toString();
+        final String password = password_edit.getText().toString();
+        final String phone = phone_edit.getText().toString();
 
-        if(username.isEmpty() || password.isEmpty()){
-            Toast.makeText(getContext(),"Enter valid credentials",Toast.LENGTH_LONG);
-        }
+
 
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getContext(),"Enter valid",Toast.LENGTH_LONG).show();
+
+                if(username.isEmpty() || password.isEmpty() ||phone.isEmpty()){
+                    Toast.makeText(getContext(),"Enter valid credentials",Toast.LENGTH_LONG).show();
+                }
 
                 final ProgressDialog pd = new ProgressDialog(getContext());
                 pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 pd.setMessage("Please Wait...");
                 pd.setIndeterminate(true);
                 pd.setCancelable(false);
-                pd.show();
+                //pd.show();
+
 
                 Thread mThread = new Thread() {
                     @Override
                     public void run() {
-
+                        ParseObject testObject = new ParseObject("TestObject");
+                        testObject.put("foo", "bar");
+                        testObject.saveInBackground();
+                        //pd.dismiss();
                     }
                 };
 

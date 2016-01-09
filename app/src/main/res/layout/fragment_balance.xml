@@ -5,9 +5,33 @@
     tools:context="bullstock.com.bullstock.Balance">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchart"
+            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            />
+
+        <ListView
+            android:id="@+id/list_balance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        </LinearLayout>
+
+
+
 
 </FrameLayout>

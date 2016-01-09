@@ -6,7 +6,6 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="23" />
 
-
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:functionalTest="false"

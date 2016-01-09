@@ -2,19 +2,13 @@ package bullstock.com.bullstock;
 
 
 import android.app.Fragment;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
 
 
 /**
@@ -72,9 +66,9 @@ public class Login extends android.support.v4.app.Fragment {
                 //pd.show();*/
 
                 //pd.show();
-                login_process obj = new login_process();
+                //login_process obj = new login_process();
                 //
-                obj.execute("sdfd");
+                //obj.execute("sdfd");
                 //Toast.makeText(getContext(),"Enter 435 ",Toast.LENGTH_SHORT).show();
 
 
@@ -86,24 +80,4 @@ public class Login extends android.support.v4.app.Fragment {
 
 }
 
-class login_process extends AsyncTask<String,Void,String> {
 
-    @Override
-    protected String doInBackground(String params[]){
-
-        String status = new String();
-        try {
-            HttpClient httpClient = new DefaultHttpClient();
-
-// Creating HTTP Post
-            HttpPost httpPost = new HttpPost("http://10.10.21.110/");
-        }
-        catch (Exception e){
-            Log.e("shrey",e+"");
-        }
-
-
-        return status;
-    }
-
-}

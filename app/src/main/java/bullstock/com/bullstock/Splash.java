@@ -29,7 +29,7 @@ public class Splash extends AppCompatActivity {
                     finish();
                 }
                 else {
-                    mainIntent = new Intent(getApplicationContext(),Login_activity.class);
+                    mainIntent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(mainIntent);
                     finish();
                 }
@@ -37,9 +37,6 @@ public class Splash extends AppCompatActivity {
 
             }
         }, SPLASH_DISPLAY_LENGTH);
-
-
-
 
     }
 }
